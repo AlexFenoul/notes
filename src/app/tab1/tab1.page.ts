@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-
+  notes = ['Exemple de note'];
   constructor() {}
 
+  addNote(){
+    this.notes.push('Nouvelle note');
+  }
 }
