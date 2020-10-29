@@ -13,10 +13,12 @@
     </ion-toolbar>
   </ion-header>
   <ul>
-    <li *ngFor="let note of notes; index as i">
-      <input type="text"
-       [(ngModel)]='notes[i]' value={{note}}>
+    <li class="item-list" *ngFor="let note of notes; index as i">
+      <ion-input type="text" placeholder="Note" [(ngModel)]="notes[i].value"></ion-input>
+      <ion-button (click)='spliceArray(i)' color="danger">Delete</ion-button>
     </li>
   </ul>
-  <ion-button (click)='addNote()'>Ajouter une note</ion-button>
+  <div id='addNote' >
+    <ion-button (click)='addNote()'>Ajouter une note</ion-button>
+  </div>
 </ion-content>

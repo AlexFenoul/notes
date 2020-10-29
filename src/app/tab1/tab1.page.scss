@@ -1,0 +1,13 @@
+
+.item-list{
+    display: flex;
+    list-style: none;
+}
+
+#addNote{
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

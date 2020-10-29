@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  notes = ['Exemple de note'];
+  notes = [{ value: 'Exemple de note' }];
   constructor() {}
 
-  addNote(){
-    this.notes.push('Nouvelle note');
+  addNote(index){
+    this.notes.push({value: 'Nouvelle note'});
+  }
+
+  spliceArray(index){
+    this.notes.splice(index, 1);
   }
 }
